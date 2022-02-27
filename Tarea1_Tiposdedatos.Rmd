@@ -1,0 +1,40 @@
+---
+title: '2021II GBI6 BIOINFORMÁTICA'
+subtitle: "Tarea 1. Tipos de datos"
+author: "Arnoldd Hernandez"
+date: "26/2/2022"
+output: 
+   html_document:
+    fig_height: 6
+    fig_width: 8
+    mathjax: local
+    self_contained: no
+    highlight: textmate
+    theme: cerulean
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+![](./img/ikiam.png)
+
+Hernández Hurtado Arnoldd Rodrigo - `arnoldd.hernandez@est.ikiam.edu.ec` - Universidad Regional Amazónica IKIAM, Tena (Ecuador)
+
+
+#### Librerías
+```{r}
+library(tidyverse)
+library(dplyr)
+```
+
+## Ejercicio 1. Crear un identificador de nombre "ciudad" y asigne como valor el nombre de alguna ciudad.
+```{r}
+ciudad <- "Tena"
+print(ciudad)
+```
+
