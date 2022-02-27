@@ -289,8 +289,8 @@ print(pais_andes)</code></pre>
 ## 6   Colombia
 ## 7  Venezuela</code></pre>
 </div>
-<div id="ejercicio-3-crear-un-dataframe-con-12-eventosfilas-y-5-variablescolumnas-cada-columna-debe-tener-diferentes-tipos-de-datos-enterodecimalcaracterlogico." class="section level4">
-<h4>Ejercicio 3 Crear un dataframe con 12 eventos(filas) y 5 variables(columnas), cada columna debe tener diferentes tipos de datos (entero,decimal,caracter,logico).</h4>
+<div id="ejercicio-3.-crear-un-dataframe-con-12-eventosfilas-y-5-variablescolumnas-cada-columna-debe-tener-diferentes-tipos-de-datos-enterodecimalcaracterlogico." class="section level4">
+<h4>Ejercicio 3. Crear un dataframe con 12 eventos(filas) y 5 variables(columnas), cada columna debe tener diferentes tipos de datos (entero,decimal,caracter,logico).</h4>
 <pre class="r"><code>Nombres&lt;-c(&quot;Arnoldd&quot;,&quot;Rodrigo&quot;,&quot;Anabella&quot;,&quot;Victoria&quot;,&quot;Aurelio&quot;,&quot;Antonio&quot;,&quot;Ruben&quot;,&quot;Juan&quot;, &quot;Margarita&quot;,&quot;Daniel&quot;,&quot;Abigail&quot;,&quot;Mario&quot;)
 edad&lt;-sample(18:24,12,replace = TRUE)
 genero&lt;-c(&quot;Masculino&quot;,&quot;Masculino&quot;,&quot;Femenino&quot;,&quot;Femenino&quot;,&quot;Masculino&quot;,&quot;Masculino&quot;,&quot;Masculino&quot;,&quot;Masculino&quot;,&quot;Femenino&quot;,&quot;Masculino&quot;,&quot;Femenino&quot;,&quot;Masculino&quot;)
@@ -301,18 +301,117 @@ Origen&lt;-(sample(RegionOrigen,12,replace = TRUE))
 est&lt;-data.frame(Nombres,edad,Altura,genero,Origen)
 print(est)</code></pre>
 <pre><code>##      Nombres edad Altura    genero    Origen
-## 1    Arnoldd   22    182 Masculino     Costa
-## 2    Rodrigo   20    179 Masculino     Costa
-## 3   Anabella   23    170  Femenino  Amazonia
-## 4   Victoria   22    188  Femenino Galapagos
-## 5    Aurelio   20    171 Masculino     Costa
-## 6    Antonio   23    180 Masculino     Costa
-## 7      Ruben   24    185 Masculino    Sierra
-## 8       Juan   24    171 Masculino    Sierra
-## 9  Margarita   19    180  Femenino  Amazonia
-## 10    Daniel   24    190 Masculino Galapagos
-## 11   Abigail   20    178  Femenino     Costa
-## 12     Mario   18    183 Masculino    Sierra</code></pre>
+## 1    Arnoldd   21    186 Masculino    Sierra
+## 2    Rodrigo   23    172 Masculino    Sierra
+## 3   Anabella   19    172  Femenino Galapagos
+## 4   Victoria   20    168  Femenino Galapagos
+## 5    Aurelio   23    173 Masculino  Amazonia
+## 6    Antonio   24    190 Masculino  Amazonia
+## 7      Ruben   23    190 Masculino Galapagos
+## 8       Juan   18    181 Masculino    Sierra
+## 9  Margarita   24    184  Femenino Galapagos
+## 10    Daniel   21    165 Masculino     Costa
+## 11   Abigail   21    167  Femenino  Amazonia
+## 12     Mario   22    172 Masculino     Costa</code></pre>
+</div>
+<div id="ejercicio-4.-cargue-el-dataset-dnase-e-identifique-su-estructura.-extraiga-subset-los-datos-que-cumplan-las-condiciones-de" class="section level4">
+<h4>Ejercicio 4. Cargue el dataset “Dnase” e identifique su estructura. Extraiga (subset) los datos que cumplan las condiciones de:</h4>
+</div>
+<div id="concconcentración-entre-0.1-y-0.2" class="section level4">
+<h4>“conc”(concentración) entre 0.1 y 0.2</h4>
+<pre class="r"><code>colnames(DNase)</code></pre>
+<pre><code>## [1] &quot;Run&quot;     &quot;conc&quot;    &quot;density&quot;</code></pre>
+<pre class="r"><code>DNase1&lt;-subset(DNase, conc &gt;= 0.1 &amp; conc &lt;= 0.2)
+tableDNase1&lt;-data.frame(DNase1)
+print(tableDNase1)</code></pre>
+<pre><code>##     Run      conc density
+## 3     1 0.1953125   0.121
+## 4     1 0.1953125   0.124
+## 19    2 0.1953125   0.137
+## 20    2 0.1953125   0.123
+## 35    3 0.1953125   0.173
+## 36    3 0.1953125   0.165
+## 51    4 0.1953125   0.118
+## 52    4 0.1953125   0.108
+## 67    5 0.1953125   0.132
+## 68    5 0.1953125   0.135
+## 83    6 0.1953125   0.191
+## 84    6 0.1953125   0.189
+## 99    7 0.1953125   0.182
+## 100   7 0.1953125   0.182
+## 115   8 0.1953125   0.152
+## 116   8 0.1953125   0.148
+## 131   9 0.1953125   0.142
+## 132   9 0.1953125   0.155
+## 147  10 0.1953125   0.164
+## 148  10 0.1953125   0.166
+## 163  11 0.1953125   0.159
+## 164  11 0.1953125   0.155</code></pre>
+</div>
+<div id="run-diferente-a-2-conc-mayor-a-0.2-y-density-menor-o-igual-a-1.0" class="section level4">
+<h4>“Run” diferente a 2, “conc” mayor a 0.2 y “density” menor o igual a 1.0</h4>
+<pre class="r"><code>colnames(DNase)</code></pre>
+<pre><code>## [1] &quot;Run&quot;     &quot;conc&quot;    &quot;density&quot;</code></pre>
+<pre class="r"><code>DNase2&lt;-subset(DNase, Run !=2 &amp; conc &gt; 0.2 &amp; density &gt;= 1.0)
+tableDNase2&lt;-data.frame(DNase2)
+print(tableDNase2)</code></pre>
+<pre><code>##     Run   conc density
+## 11    1  3.125   1.019
+## 12    1  3.125   1.001
+## 13    1  6.250   1.334
+## 14    1  6.250   1.364
+## 15    1 12.500   1.730
+## 16    1 12.500   1.710
+## 43    3  3.125   1.067
+## 44    3  3.125   1.077
+## 45    3  6.250   1.629
+## 46    3  6.250   1.479
+## 47    3 12.500   2.003
+## 48    3 12.500   1.884
+## 61    4  6.250   1.424
+## 62    4  6.250   1.399
+## 63    4 12.500   1.740
+## 64    4 12.500   1.732
+## 75    5  3.125   1.060
+## 76    5  3.125   1.031
+## 77    5  6.250   1.425
+## 78    5  6.250   1.409
+## 79    5 12.500   1.750
+## 80    5 12.500   1.738
+## 91    6  3.125   1.062
+## 92    6  3.125   1.072
+## 93    6  6.250   1.424
+## 94    6  6.250   1.459
+## 95    6 12.500   1.768
+## 96    6 12.500   1.806
+## 107   7  3.125   1.052
+## 108   7  3.125   1.035
+## 109   7  6.250   1.409
+## 110   7  6.250   1.392
+## 111   7 12.500   1.759
+## 112   7 12.500   1.739
+## 123   8  3.125   1.043
+## 124   8  3.125   1.002
+## 125   8  6.250   1.466
+## 126   8  6.250   1.381
+## 127   8 12.500   1.743
+## 128   8 12.500   1.724
+## 139   9  3.125   1.046
+## 140   9  3.125   1.026
+## 141   9  6.250   1.398
+## 142   9  6.250   1.405
+## 143   9 12.500   1.693
+## 144   9 12.500   1.729
+## 155  10  3.125   1.042
+## 156  10  3.125   1.075
+## 157  10  6.250   1.340
+## 158  10  6.250   1.406
+## 159  10 12.500   1.699
+## 160  10 12.500   1.708
+## 173  11  6.250   1.421
+## 174  11  6.250   1.385
+## 175  11 12.500   1.715
+## 176  11 12.500   1.721</code></pre>
 </div>
 
 
