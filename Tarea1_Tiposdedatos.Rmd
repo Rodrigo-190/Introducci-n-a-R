@@ -32,9 +32,15 @@ library(tidyverse)
 library(dplyr)
 ```
 
-## Ejercicio 1. Crear un identificador de nombre "ciudad" y asigne como valor el nombre de alguna ciudad.
+#### Ejercicio 1. Crear un identificador de nombre "ciudad" y asigne como valor el nombre de alguna ciudad.
 ```{r}
 ciudad <- "Tena"
 print(ciudad)
+```
+#### Ejercicio 2. Crear un identificador de nombre "pais_andes" y asigne como valor los nombres de los paises por donde cruza la cordillera de Los Andes.
+```{r}
+pais_andes<-c("Argentina","Chile","Bolivia","Perú","Ecuador","Colombia","Venezuela")
+pais_andes<-data.frame(pais_andes)
+print(pais_andes)
 ```
 
