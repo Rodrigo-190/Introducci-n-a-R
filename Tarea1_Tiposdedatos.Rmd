@@ -44,3 +44,15 @@ pais_andes<-data.frame(pais_andes)
 print(pais_andes)
 ```
 
+#### Ejercicio 3. Crear un dataframe con 12 eventos(filas) y 5 variables(columnas), cada columna debe tener diferentes tipos de datos (entero,decimal,caracter,logico).
+```{r}
+Nombres<-c("Arnoldd","Rodrigo","Anabella","Victoria","Aurelio","Antonio","Ruben","Juan", "Margarita","Daniel","Abigail","Mario")
+edad<-sample(18:24,12,replace = TRUE)
+genero<-c("Masculino","Masculino","Femenino","Femenino","Masculino","Masculino","Masculino","Masculino","Femenino","Masculino","Femenino","Masculino")
+
+Altura<-(sample(165:190,12,replace = TRUE))
+RegionOrigen<-c("Galapagos","Costa","Sierra","Amazonia")
+Origen<-(sample(RegionOrigen,12,replace = TRUE))
+est<-data.frame(Nombres,edad,Altura,genero,Origen)
+print(est)
+```

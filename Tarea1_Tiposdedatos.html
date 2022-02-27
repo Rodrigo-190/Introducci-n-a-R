@@ -289,6 +289,31 @@ print(pais_andes)</code></pre>
 ## 6   Colombia
 ## 7  Venezuela</code></pre>
 </div>
+<div id="ejercicio-3-crear-un-dataframe-con-12-eventosfilas-y-5-variablescolumnas-cada-columna-debe-tener-diferentes-tipos-de-datos-enterodecimalcaracterlogico." class="section level4">
+<h4>Ejercicio 3 Crear un dataframe con 12 eventos(filas) y 5 variables(columnas), cada columna debe tener diferentes tipos de datos (entero,decimal,caracter,logico).</h4>
+<pre class="r"><code>Nombres&lt;-c(&quot;Arnoldd&quot;,&quot;Rodrigo&quot;,&quot;Anabella&quot;,&quot;Victoria&quot;,&quot;Aurelio&quot;,&quot;Antonio&quot;,&quot;Ruben&quot;,&quot;Juan&quot;, &quot;Margarita&quot;,&quot;Daniel&quot;,&quot;Abigail&quot;,&quot;Mario&quot;)
+edad&lt;-sample(18:24,12,replace = TRUE)
+genero&lt;-c(&quot;Masculino&quot;,&quot;Masculino&quot;,&quot;Femenino&quot;,&quot;Femenino&quot;,&quot;Masculino&quot;,&quot;Masculino&quot;,&quot;Masculino&quot;,&quot;Masculino&quot;,&quot;Femenino&quot;,&quot;Masculino&quot;,&quot;Femenino&quot;,&quot;Masculino&quot;)
+
+Altura&lt;-(sample(165:190,12,replace = TRUE))
+RegionOrigen&lt;-c(&quot;Galapagos&quot;,&quot;Costa&quot;,&quot;Sierra&quot;,&quot;Amazonia&quot;)
+Origen&lt;-(sample(RegionOrigen,12,replace = TRUE))
+est&lt;-data.frame(Nombres,edad,Altura,genero,Origen)
+print(est)</code></pre>
+<pre><code>##      Nombres edad Altura    genero    Origen
+## 1    Arnoldd   22    182 Masculino     Costa
+## 2    Rodrigo   20    179 Masculino     Costa
+## 3   Anabella   23    170  Femenino  Amazonia
+## 4   Victoria   22    188  Femenino Galapagos
+## 5    Aurelio   20    171 Masculino     Costa
+## 6    Antonio   23    180 Masculino     Costa
+## 7      Ruben   24    185 Masculino    Sierra
+## 8       Juan   24    171 Masculino    Sierra
+## 9  Margarita   19    180  Femenino  Amazonia
+## 10    Daniel   24    190 Masculino Galapagos
+## 11   Abigail   20    178  Femenino     Costa
+## 12     Mario   18    183 Masculino    Sierra</code></pre>
+</div>
 
 
 
